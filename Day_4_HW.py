@@ -25,7 +25,8 @@ print("Let's count our pokemon")
 
 pokemon = True
 count = 0
-                                                        #  Hope you know your pokemon Travis :)
+quit = False
+
 while pokemon:
     pokemon = input("Which pokemon is this?")
     print(pokemon)
@@ -33,5 +34,27 @@ while pokemon:
     if count == 5:
         print("No more Pokemon")
         print("That's", count, "Pokemon!")
+    elif pokemon == 'quit':
+        count = count - 1
+        print("You only have", count, "Pokemon, you can't enter the tournament")
         break
+        
+
+        
+#--------------------------------------------------------------#
+
+# Extra credit
+
+import random
+cars = ["Ford", "BMW", "Chevy", "Volkswagen", "GMC", "Toyota", "Honda", "KIA"] 
+
+random_car = random.choice(cars)
+
+while True:
+    guesser_input = input("What car brand am I thinking?")
     
+    if random_car == guesser_input:
+        print('Yes! You got it')
+        break
+    else:
+        print("Nope! That's not it. Try again")
